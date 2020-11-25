@@ -51,7 +51,7 @@ No. Online Co-op is not feasible with a mod using solely the Afterbirth+ lua API
 
 [h1] Your mod breaks my mod! How can I fix this? [/h1]
 Directly below the Config table in main.lua is a blob of useful information for ensuring compatibility with True Co-Op! Feel free to ask questions to DeadInfinity on the Binding of Isaac Discord if you need clarification.</description>
-    <version>21.1</version>
+    <version>21.2</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Player Characters"/>
