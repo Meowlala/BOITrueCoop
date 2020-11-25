@@ -3925,7 +3925,7 @@ function InfinityTrueCoopInterface.AddModdedCardFront(card, anm2, anim)
 end
 
 function InfinityTrueCoopInterface.PlayerJustSpawned(player, mustBeCoop)
-    return player.Variant == 1 or (player:GetData().TrueCoop.JustSpawned and (not mustBeCoop or player:GetData().TrueCoop.CoopPlayer)) or player:GetData().TrueCoop.Save.SelectingCharacter
+    return player.Variant == 1 or (player:GetData().TrueCoop and player:GetData().TrueCoop.JustSpawned and (not mustBeCoop or player:GetData().TrueCoop.CoopPlayer)) or (player:GetData().TrueCoop and player:GetData().TrueCoop.Save and player:GetData().TrueCoop.Save.SelectingCharacter)
 end
 
 function InfinityTrueCoopInterface.PlayerIsGhost(player)
