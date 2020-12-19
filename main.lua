@@ -3320,7 +3320,9 @@ mod:AddCallback(ModCallbacks.MC_POST_EFFECT_RENDER, function(_, eff)
                             eff:Remove()
                         end
 
-                        InfinityTrueCoopInterface.ReviveGhost(data.TrueCoopPlayer)
+                        if data.TrueCoopPlayer then
+                            InfinityTrueCoopInterface.ReviveGhost(data.TrueCoopPlayer)
+                        end
                     end
                 end
             end
@@ -3391,7 +3393,7 @@ mod:AddCallback(ModCallbacks.MC_ENTITY_TAKE_DMG, function(_, player, amount, fla
             for _, p in ipairs(players) do
                 local pdata = p:GetData()
                 if pdata.TrueCoop.Save.IsGhost and pdata.TrueCoop.Save.GhostInventory then
-                    deadPlayers[#deadPlayers + 1] = player
+                    deadPlayers[#deadPlayers + 1] = p
                 end
             end
 
